@@ -4542,7 +4542,7 @@ let sortOrder = [];
 // ===== SAVE / LOAD =====
 // Google Apps Script URL — paste yours here after running the Apps Script setup
 // Leave as empty string '' until you have the URL from Google
-const GAS_URL = 'https://script.google.com/macros/s/AKfycbygvNQbS758Dl8WzcN2gOk1jmLikedkIP1kyiwfLPuKdZqhgtsNmmSR_QMi2_-dqJJl/exec';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbxL-G1b7FDzsT0iumXlRg9mTPLjGAaSXJ8oJaiarUiS77cSZjXEeyyC4c6IJubRrKd2/exec';
 
 const SAVE_PREFIX = 'terraAus_v5_';
 function saveKey(n){ return SAVE_PREFIX+n.trim().toLowerCase().replace(/\s+/g,'_'); }
@@ -4556,12 +4556,14 @@ function loadLocal(name){
   catch(e){ return null; }
 }
 
-// ── Google Apps Script (cross-device, only when GAS_URL is filled in) ──
+// ── Google Apps Script (cross-device, GET only to avoid CORS) ──
 async function saveToCloud(name,data){
   if(!GAS_URL) return false;
   try{
-    const url = GAS_URL+'?action=save&name='+encodeURIComponent(name);
-    await fetch(url,{ method:'POST', body:JSON.stringify(data), headers:{'Content-Type':'text/plain'} });
+    // Use GET with data encoded in URL — avoids CORS preflight
+    const encoded = encodeURIComponent(JSON.stringify(data));
+    const url = GAS_URL+'?action=save&name='+encodeURIComponent(name)+'&data='+encoded;
+    await fetch(url, {mode:'no-cors'});
     return true;
   }catch(e){ return false; }
 }
