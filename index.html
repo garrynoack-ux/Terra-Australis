@@ -190,75 +190,6 @@
   /* Player count */
   .setup-section { margin-bottom: 1.25rem; }
   .setup-label { font-size: .78rem; text-transform: uppercase; letter-spacing: .15em; color: var(--dark-sand); margin-bottom: .6rem; }
-  .player-count-row { display: flex; gap: .6rem; }
-  .pcount-btn { width: 62px; height: 56px; background: rgba(255,255,255,.05); border: 2px solid rgba(196,96,26,.25); border-radius: 10px; cursor: pointer; font-size: 1.3rem; font-weight: 700; color: var(--cream); transition: all .15s; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
-  .pcount-btn small { font-size: .6rem; color: var(--dark-sand); font-weight: 400; }
-  .pcount-btn.selected { border-color: var(--ochre); background: rgba(196,96,26,.25); box-shadow: 0 0 12px rgba(196,96,26,.3); }
-
-  /* Player rows */
-  .player-name-row { display: flex; align-items: center; gap: 10px; margin-bottom: .6rem; }
-  .player-name-row label { font-size: .8rem; color: var(--dark-sand); width: 68px; flex-shrink: 0; }
-  .player-name-row input { flex: 1; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.2); color: var(--cream); padding: .45rem .8rem; border-radius: 7px; font-size: .85rem; font-family: inherit; }
-  .player-name-row input:focus { outline: none; border-color: var(--ochre); }
-  .token-pick { width: 52px; height: 44px; cursor: pointer; border-radius: 8px; border: 2px solid rgba(196,96,26,.2); background: rgba(255,255,255,.04); display: flex; align-items: center; justify-content: center; transition: all .15s; flex-shrink: 0; }
-  .token-pick:hover { border-color: var(--ochre); }
-  .token-pick.selected { border-color: var(--gold); background: rgba(212,160,23,.15); }
-  .token-pick svg { width: 34px; height: 34px; }
-
-  /* Token modal */
-  .token-modal-bg { display: none; position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,.75); align-items: center; justify-content: center; }
-  .token-modal-bg.open { display: flex; }
-  .token-modal { background: #1C1208; border: 1px solid rgba(196,96,26,.4); border-radius: 14px; padding: 1.25rem; width: 320px; max-width: 95vw; }
-  .token-modal h3 { font-size: .9rem; color: var(--sand); margin-bottom: .8rem; text-align: center; }
-  .token-grid-modal { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; }
-  .token-grid-modal button { background: rgba(255,255,255,.05); border: 2px solid rgba(196,96,26,.2); border-radius: 9px; padding: .5rem; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 3px; transition: all .15s; }
-  .token-grid-modal button:hover { border-color: var(--ochre); background: rgba(196,96,26,.2); }
-  .token-grid-modal button svg { width: 40px; height: 40px; }
-  .token-grid-modal button span.tn { font-size: .62rem; color: var(--dark-sand); }
-
-  .btn-secondary { background: rgba(255,255,255,.07); color: var(--cream); border: 1px solid rgba(255,255,255,.2); padding: .7rem 1.5rem; border-radius: 8px; font-size: .9rem; font-weight: 500; cursor: pointer; transition: all .2s; }
-  .btn-secondary:hover { background: rgba(255,255,255,.12); }
-
-  /* Player tabs */
-  .player-tabs { display: flex; gap: 6px; justify-content: center; margin-bottom: .75rem; flex-wrap: wrap; }
-  .p-tab { display: flex; align-items: center; gap: 6px; padding: .3rem .7rem; border-radius: 20px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); font-size: .72rem; cursor: default; transition: all .2s; }
-  .p-tab.active-turn { border-color: var(--gold); background: rgba(212,160,23,.15); color: var(--gold); font-weight: 600; }
-  .p-tab.done-turn { border-color: var(--light-green); background: rgba(58,107,53,.2); color: #90ff90; }
-  .p-tab svg { width: 22px; height: 22px; }
-  .p-tab-name { max-width: 80px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
-  .player-token-display svg { width: 36px; height: 36px; }
-
-  .btn-save-mini { background: rgba(46,107,158,.25); color: var(--cream); border: 1px solid rgba(46,107,158,.4); padding: .28rem .6rem; border-radius: 6px; cursor: pointer; font-size: .68rem; font-weight: 500; margin-top: 4px; transition: all .15s; display: inline-block; }
-  .btn-save-mini:hover { background: rgba(46,107,158,.5); }
-
-  /* Unlock code box */
-  .unlock-code-box { background: rgba(212,160,23,.1); border: 2px solid var(--gold); border-radius: 14px; padding: 1.5rem; margin: 1.5rem auto; max-width: 400px; }
-  .unlock-code-box h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--gold); margin-bottom: .4rem; }
-  .unlock-code-box p { font-size: .83rem; color: var(--dark-sand); margin-bottom: 1rem; line-height: 1.5; }
-  .code-display { font-family: 'Courier New', monospace; font-size: 2rem; font-weight: 700; letter-spacing: .3em; color: #fff; background: rgba(0,0,0,.4); border: 1px solid var(--gold); border-radius: 8px; padding: .6rem 1rem; display: inline-block; }
-  .code-instruction { font-size: .78rem; color: rgba(232,213,163,.6); margin-top: .75rem; line-height: 1.5; }
-
-  /* Detailed Aus map */
-  .aus-map-wrap { display: flex; justify-content: center; margin-bottom: 1.5rem; }
-  .aus-map-svg { width: 340px; height: 240px; filter: drop-shadow(0 0 18px rgba(196,96,26,.5)); }
-
-  /* ===== GAME SCREEN ===== */
-  #gameScreen {
-    background: #0F0A05;
-    flex-direction: row;
-  }
-
-  /* Left: board map */
-  .board-area {
-    flex: 1;
-    min-width: 0;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: auto;
-  }
 
   .level-header {
     text-align: center;
@@ -1615,14 +1546,7 @@
     </div>
 
     <!-- Player count -->
-    <div class="setup-section">
-      <div class="setup-label">Number of players</div>
-      <div class="player-count-row">
-        <button class="pcount-btn selected" data-n="1" onclick="setPlayerCount(1)">1<small>player</small></button>
-        <button class="pcount-btn" data-n="2" onclick="setPlayerCount(2)">2<small>players</small></button>
-        <button class="pcount-btn" data-n="3" onclick="setPlayerCount(3)">3<small>players</small></button>
-        <button class="pcount-btn" data-n="4" onclick="setPlayerCount(4)">4<small>players</small></button>
-      </div>
+    
     </div>
 
     <!-- Player rows — name auto-loads saved progress -->
@@ -1635,8 +1559,6 @@
     </div>
 
     <div style="display:flex;gap:.75rem;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:.75rem;">
-      <button class="btn-primary" id="startBtn" onclick="startGame()">Begin the Journey →</button>
-      <button class="btn-secondary" onclick="showIntroScreen()">← Read Letter Again</button>
     </div>
     <!-- Single player setup -->
     <div class="setup-section" style="text-align:left;">
@@ -1645,10 +1567,7 @@
       <div id="nameStatus" style="font-size:.7rem;min-height:.9rem;color:rgba(200,170,100,.5);"></div>
       <p style="font-size:.67rem;color:rgba(200,170,100,.42);margin-top:.2rem;">💡 Same name on any school laptop = resume from where you left off</p>
     </div>
-    <div class="setup-section" style="text-align:left;">
-      <div class="setup-label">Choose your token</div>
-      <div id="playerRows"></div>
-    </div>
+
     <div style="display:flex;gap:.75rem;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:.75rem;">
       <button class="btn-primary" onclick="startGame()">Begin the Journey →</button>
       <button class="btn-secondary" onclick="showIntroScreen()">← Read Letter Again</button>
@@ -4676,8 +4595,7 @@ function showTitleScreen() { document.getElementById('introScreen').classList.re
 async function startGame() {
   const nameEl = document.getElementById('playerName');
   const name = (nameEl ? nameEl.value.trim() : '') || 'Explorer';
-  const tokenEl = document.querySelector('#playerRows .token-pick');
-  const token = tokenEl ? tokenEl.dataset.token : TOKEN_KEYS[0];
+  const token = TOKEN_KEYS[0]; // default token
   // Show loading while checking cloud
   const btn = document.querySelector('button[onclick="startGame()"]');
   if(btn){ btn.textContent='Loading...'; btn.disabled=true; }
@@ -4701,9 +4619,7 @@ async function startGame() {
 function refreshGameUI() {
   const p = players[currentPlayerIdx];
   if (!p) return;
-  const tokenKey = p.token || 'kangaroo';
-  const tokenData = TOKENS[tokenKey] || TOKENS['kangaroo'];
-  document.getElementById('panelTokenSvg').innerHTML = tokenData.svg;
+  // No token display — single player text-only
   document.getElementById('panelPlayerName').textContent = p.name;
   renderPlayerTabs();
 }
@@ -4721,8 +4637,7 @@ function generateStars() {
   }
 }
 generateStars();
-buildTokenModal();
-setPlayerCount(1);
+// single player — no token or player count needed
 // Name-based saves: no auto-banner on load — player types name to resume
 
 // ===== TEACHER MODE =====
